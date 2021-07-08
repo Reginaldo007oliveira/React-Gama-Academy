@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Appas from "./Appas";
-ReactDOM.render(
-  <Appas title="Hello Gama " name="Bora bora.. " />,
-  document.getElementById("root")
-);
+//importação da função repositorio para a index
+import Repositories from "./Repositories";
+//renderiza o componente repositório <Repositories />
+ReactDOM.render(<Repositories />, document.getElementById("root"));
