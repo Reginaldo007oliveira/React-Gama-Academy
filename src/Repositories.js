@@ -1,4 +1,5 @@
 //função repositório
-export default function Repositories() {
-  return <h1>Repositories</h1>;
+function Repositories() {
+  return <h1>Repositories2</h1>;
 }
+export default Repositories;
