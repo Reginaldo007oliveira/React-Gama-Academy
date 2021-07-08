@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Site para criação de rotas em react
+
+https://reactrouter.com/web/guides/quick-start
+
 ### `yarn start`
 
 Runs the app in the development mode.\
