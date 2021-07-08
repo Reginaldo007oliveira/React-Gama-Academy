@@ -4,7 +4,7 @@ import "./App.css";
 function Appas(props) {
   //declara a constante usuário e atribui um valor do estado para ela
   //conceito de desestruturação
-  const [usuario, setUsuario] = useState("Guilherme");
+  const [usuario, setUsuario] = useState("");
   return (
     //div pai com um elemento h1 uma div interna e um input <div> foi substituida por <></>
     <Fragment>
@@ -14,10 +14,10 @@ function Appas(props) {
       <div>DIGITE O NOME:</div>
       <input
         name="Usuários"
-        id="usuario"
-        className="usuarioInput"
         placeholder="Usuário"
+        onChange={(e) => console.log(e.target.value)}
       />
+      <button type="button"> Pesquisar </button>
     </Fragment>
   );
 }
