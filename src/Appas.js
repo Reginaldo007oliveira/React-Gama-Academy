@@ -15,7 +15,7 @@ function Appas(props) {
       <input
         name="Usuários"
         placeholder="Usuário"
-        onChange={(e) => console.log(e.target.value)}
+        onChange={(e) => setUsuario(e.target.value)}
       />
       <button type="button"> Pesquisar </button>
     </Fragment>
