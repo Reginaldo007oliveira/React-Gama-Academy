@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+
 //importação da função repositorio para a index
-import Repositories from "./Repositories";
+import App from "./App";
 
 //renderiza o componente repositório <Repositories />
-ReactDOM.render(<Repositories />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

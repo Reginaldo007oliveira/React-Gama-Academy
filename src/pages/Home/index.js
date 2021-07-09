@@ -1,7 +1,6 @@
 //Usando Hooks: estado das coisas
 import React, { Fragment, useState } from "react";
 import axios from "axios";
-import "./App.css";
 
 function Home(props) {
   //declara a constante usuário e atribui um valor do estado para ela
