@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export const Titulo = styled.h1`
   text-align: center;
   font-size: 2rem;
-  font-family: sans-serif;
-  color: #333;
+  font-family: verdana;
+  color: #ff0000;
+  
 `;
