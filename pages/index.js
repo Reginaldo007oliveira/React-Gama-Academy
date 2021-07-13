@@ -26,7 +26,7 @@ export default function Home() {
     "peas",
     "rafaballerini",
     "felipedechamp",
-    "KauanZika",
+    "marcobrunodev",
   ];
 
   return (
