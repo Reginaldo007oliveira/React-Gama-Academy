@@ -19,7 +19,7 @@ function ProfileSidebar(propriedades) {
 }
 
 export default function Home() {
-  const usuarioAleatorio = "mauriciorocha1968";
+  const usuarioAleatorio = "reginaldo007oliveira";
   const pessoasFavoritas = [
     "juunegreiros",
     "omariosouto",
