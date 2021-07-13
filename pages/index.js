@@ -3,76 +3,76 @@ import Box from "../src/components/Box";
 import {
   AlurakutMenu,
   OrkutNostalgicIconSet,
-} from "../src/lib/AlurakutCommons";
+} from "../src/lib/aluraKutCommons";
+//ProfileRelationsBoxWrapper da uma juntada nas coisas do box
 import { ProfileRelationsBoxWrapper } from "../src/components/ProfileRelations";
-import { useEffect, useState } from "react";
-
-function ProfileSidebar(props) {
+import { Fragment } from "react";
+function ProfileSidebar(propriedades) {
   return (
     <Box>
       <img
-        src={`https://github.com/${props.githubUser}.png`}
-        style={{ borderRadius: "4px" }}
+        src={`https://github.com/${propriedades.githubUser}.png`}
+        style={{ borderRadius: "33px" }}
       />
     </Box>
   );
 }
 
-function FollowingSidebar({ githubUser }) {
-  const [follower, setFollower] = useState([]);
-
-  useEffect(async () => {
-    const url = `https://api.github.com/users/${githubUser}/followers`;
-    const response = await fetch(url);
-    setFollower(await response.json());
-  }, []);
-
-  const followers = follower.slice(0, 6);
-
-  return (
-    <ProfileRelationsBoxWrapper>
-      <h2 className="smallTitle">Pessoas da Comunidade ({followers.length})</h2>
-
-      <ul>
-        {followers.map((follower) => {
-          return (
-            <li>
-              <a href={follower.html_url}>
-                <img src={`https://github.com/${follower.login}.png`} />
-                <span>{follower.login}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </ProfileRelationsBoxWrapper>
-  );
-}
-
 export default function Home() {
-  const githubUser = "reginaldo007oliveira";
+  const usuarioAleatorio = "reginaldo007oliveira";
+  const pessoasFavoritas = [
+    "juunegreiros",
+    "omariosouto",
+    "peas",
+    "rafaballerini",
+    "felipefialho",
+  ];
 
   return (
-    <>
+    <Fragment>
       <AlurakutMenu />
       <MainGrid>
-        <div className={"profileArea"} style={{ gridArea: "profileArea;" }}>
-          <ProfileSidebar githubUser={githubUser} />
+        <div className="profileArea" style={{ gridArea: "profileArea" }}>
+          <ProfileSidebar githubUser={usuarioAleatorio} />
         </div>
-        <div className={"welcomeArea"} style={{ gridArea: "welcomeArea;" }}>
-          <Box>
-            <h1 className="title">Bem vindo(a) </h1>
 
-            <OrkutNostalgicIconSet></OrkutNostalgicIconSet>
+        <div className="welcomeArea" style={{ gridArea: "welcomeArea" }}>
+          <Box>
+            <h1 className="title">Bem vindo(a)</h1>
+
+            <OrkutNostalgicIconSet />
           </Box>
         </div>
+
         <div
-          className={"profileRelationsArea"}
-          style={{ gridArea: "profileRelationsArea;" }}
+          className="profileRelationsArea"
+          style={{ gridArea: "profileRelationsArea" }}
         >
-          <FollowingSidebar githubUser={githubUser}></FollowingSidebar>
+          <ProfileRelationsBoxWrapper>
+            <h2 className="smallTitle">
+              Pessoas na Comunidade ({pessoasFavoritas.length})
+            </h2>
+
+            <ul>
+              {pessoasFavoritas.map((itemAtual) => {
+                return (
+                  <li>
+                    <h2 className="smallTitle">
+                      <a
+                        href={`https://github.com/${itemAtual}`}
+                        key={itemAtual}
+                      >
+                        <img src={`https://github.com/${itemAtual}.png`} />
+                        <span>{itemAtual}</span>
+                      </a>
+                    </h2>
+                  </li>
+                );
+              })}
+            </ul>
+          </ProfileRelationsBoxWrapper>
         </div>
       </MainGrid>
-    </>
+    </Fragment>
   );
 }
