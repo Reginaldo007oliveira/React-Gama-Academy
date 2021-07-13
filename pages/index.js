@@ -56,6 +56,7 @@ export default function Home() {
             <ul>
               {pessoasFavoritas.map((itemAtual) => {
                 return (
+                  //não colocar a / <a href .. se colocar não funciona o direcionamento`https://github.com/$
                   <li>
                     <a href={`https://github.com/${itemAtual}`} key={itemAtual}>
                       <img src={`https://github.com/${itemAtual}.png`} />
