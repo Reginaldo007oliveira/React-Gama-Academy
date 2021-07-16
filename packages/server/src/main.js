@@ -8,8 +8,7 @@
 //até aqui foi encodado com querystring
 
 import { createServer } from "http";
-import { readFile } from "fs";
-import { resolve } from "path";
+
 import { parse } from "querystring";
 
 const server = createServer((request, response) => {
