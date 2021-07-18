@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.background-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.section-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  scroll-padding-block-start: 55px;
+}
+.section-one {
+  background-image: url(../assets/4108405.png);
+  width: 100%;
+}
+
+.section-two {
+  background-image: url(../assets/fun2.png);
+}
+
+footer {
+  height: 150px;
+  padding: 25px;
+  text-align: center;
+  background-color: black;
+  color: blanchedalmond;
+}
+.card-container {
+  background: rgba(255, 253, 253, 0.96);
+  border-radius: 25px;
+  padding: 25px;
+  max-width: 450px;
+}
+form {
+  display: grid;
+}
+input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgb(145, 2, 2);
+  color: #fff;
+}
+.nomeweb {
+  background: rgb(97, 186, 255);
+}
+
+/*vh 100 na altura melhor usar vh mesmo*/
